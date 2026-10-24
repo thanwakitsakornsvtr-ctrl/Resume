@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  resume:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SITE_URL: https://thanwa.kitsakorn.com
+    container_name: thanwa-resume
+    restart: unless-stopped
+    ports:
+      - "8888:8080"

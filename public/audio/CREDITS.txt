@@ -1,0 +1,16 @@
+First Light Particles
+Artist: Yoiyami
+Source and author license declaration: https://opengameart.org/node/182244
+Original download: https://opengameart.org/sites/default/files/first_light_particles_0.wav
+License: CC0 1.0 Universal
+License deed: https://creativecommons.org/publicdomain/zero/1.0/
+Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+Retrieved: 2026-10-24
+
+The artist publishes this recording under CC0 and describes it as original piano/ambient music. The source page permits commercial and non-commercial projects and derivatives without attribution. Courtesy credit is displayed in the website footer; no endorsement is implied.
+
+Local file: first-light-particles.mp3
+Adaptation: WAV converted to MP3 with LAME, 128 kbps, stereo. No composition edits.
+Source duration: approximately 131.72 seconds; source PCM 48 kHz stereo 16-bit.
+Original WAV SHA-256: f0538a1a67450cc1d5e305fad5bc0d5d422ad809f720d695ab356e55fbe40fc5
+Local MP3 SHA-256: d1140ce172579bbd62b6f53bd231c19b1e0a30604ec90f76a9093fe202ad0408

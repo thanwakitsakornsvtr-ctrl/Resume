@@ -1,0 +1,44 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies and build outputs
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# Environment secrets
+.env
+.env.*
+*.local
+!.env.example
+
+# Sensitive directories / Agent scratch
+.aws/
+.codex/
+.agents/
+
+# Editor directories and OS files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Local skills and planning documents (kept on disk)
+.agent/
+docs/
+/DEVELOPMENT_PLAN.md
+/architecture.md
+/project-map.md
+/scripts.md
