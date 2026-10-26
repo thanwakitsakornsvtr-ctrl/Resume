@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   resume:
     build:
@@ -7,10 +5,7 @@ services:
       dockerfile: Dockerfile
       args:
         SITE_URL: https://thanwa.kitsakorn.com
-
     container_name: thanwa-resume
     restart: unless-stopped
-
     ports:
       - "127.0.0.1:8888:8080"
-0
