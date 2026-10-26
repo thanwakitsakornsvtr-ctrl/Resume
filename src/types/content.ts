@@ -61,11 +61,19 @@ export interface ProjectImage {
   height: number
 }
 
+export interface ProjectScreenshot extends ProjectImage {
+  id: string
+  title: { en: string; th: string }
+  caption: { en: string; th: string }
+}
+
 export interface ProjectAssets {
   demoUrl?: string
   sourceUrl?: string
   image?: ProjectImage
   architectureImage?: ProjectImage
+  screenshots?: ProjectScreenshot[]
+  screenshotNote?: { en: string; th: string }
 }
 
 export interface FeaturedProject extends ProjectAssets {

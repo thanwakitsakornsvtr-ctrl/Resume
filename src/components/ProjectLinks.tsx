@@ -35,9 +35,9 @@ export function ProjectLinks({
           target="_blank"
           rel="noopener noreferrer"
           className="project-demo-link"
-          aria-label={`${t('Open demo')}: ${title} (${t('Opens in a new tab')})`}
+          aria-label={`${t('Visit website')}: ${title} (${t('Opens in a new tab')})`}
         >
-          {t('Open demo')}
+          {t('Visit website')}
           <ArrowUpRight size={16} aria-hidden="true" />
         </a>
       )}

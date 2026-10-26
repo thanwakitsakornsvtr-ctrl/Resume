@@ -1,8 +1,12 @@
 import { useContent } from '../hooks/useContent'
-import { ArrowDownRight } from 'lucide-react'
+import { ArrowDownRight, ArrowUpRight } from 'lucide-react'
 import { Icon, SectionHeading, Tag } from '../components/ui'
+import { usePortfolioStore } from '../store/usePortfolioStore'
+
 export function CaseStudies() {
   const { caseStudies, t } = useContent()
+  const setProjectView = usePortfolioStore((state) => state.setProjectView)
+
   return (
     <section
       id="case-studies"
@@ -25,7 +29,7 @@ export function CaseStudies() {
           )}
         />
         <div className="case-studies-list">
-          {caseStudies.map((study) => (
+          {caseStudies.map((study, index) => (
             <details
               key={study.id}
               id={study.id}
@@ -37,7 +41,10 @@ export function CaseStudies() {
                   <Icon name={study.icon} />
                 </span>
                 <span className="case-main">
-                  <span className="case-category">{study.category}</span>
+                  <span className="case-category">
+                    <span className="case-number">{study.number}</span> ·{' '}
+                    {study.category}
+                  </span>
                   <span className="case-title" role="heading" aria-level={3}>
                     {study.title}
                   </span>
@@ -54,9 +61,24 @@ export function CaseStudies() {
                 </span>
               </summary>
               <div className="case-detail">
-                <p className="detail-sample-label">
-                  {study.recordLabel ?? t('Engineering notes')}
-                </p>
+                <div className="case-detail-header">
+                  <p className="detail-sample-label">
+                    <span className="tiny-dot" />
+                    {study.recordLabel ?? t('Engineering notes')}
+                  </p>
+                  <a
+                    href="#featured-project"
+                    className="case-context-link"
+                    onClick={() =>
+                      setProjectView(index === 0 ? 'workspace' : 'architecture')
+                    }
+                  >
+                    {index === 0
+                      ? t('Inspect related screen')
+                      : t('View Architecture')}
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </a>
+                </div>
                 <div className="case-detail-grid">
                   {(
                     [
@@ -68,7 +90,7 @@ export function CaseStudies() {
                       [t('How to validate'), study.validation],
                     ] as const
                   ).map(([label, text]) => (
-                    <div key={label}>
+                    <div key={label} className="case-detail-box">
                       <h4>{label}</h4>
                       <p>{text}</p>
                     </div>

@@ -8,10 +8,29 @@ import {
   Users,
 } from 'lucide-react'
 import { useContent } from '../hooks/useContent'
+import { bcgScreenshots } from '../content/project-assets'
+import { ProjectGallery } from './ProjectGallery'
 
 const roleIcons = [Users, Store, Landmark, ShieldCheck]
 
 export function WorkspacePreview() {
+  const { locale } = useContent()
+  return (
+    <ProjectGallery
+      screenshots={bcgScreenshots}
+      projectName="BCG Platform"
+      note={
+        locale === 'th'
+          ? 'บันทึกจากสภาพแวดล้อมพัฒนา · บางหน้ามีข้อมูลตัวอย่างสำหรับทดสอบระบบ'
+          : 'Captured in the development environment · Some screens include test data.'
+      }
+    >
+      <WorkspaceOverview />
+    </ProjectGallery>
+  )
+}
+
+function WorkspaceOverview() {
   const { workspace } = useContent()
   return (
     <div className="bcg-overview">

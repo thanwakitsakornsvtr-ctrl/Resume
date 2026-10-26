@@ -60,20 +60,23 @@ export function SiteHeader({ homeHref = '' }: { homeHref?: string }) {
             ))}
           </nav>
           <div className="header-actions">
-            <MusicToggle />
-            <LanguageDropdown />
-            <span className="header-action-divider" aria-hidden="true" />
+            <div className="header-utility-capsule">
+              <MusicToggle />
+              <span className="header-capsule-divider" aria-hidden="true" />
+              <LanguageDropdown />
+            </div>
             <a
               className="header-contact"
               href={`mailto:${profile.email}`}
               aria-label={t('Let’s talk')}
             >
+              <span className="header-contact-dot" aria-hidden="true" />
               <span className="header-contact-label">{t('Let’s talk')}</span>
               <span className="header-contact-icon">
-                <ArrowUpRight size={16} aria-hidden="true" />
+                <ArrowUpRight size={14} aria-hidden="true" />
                 <Mail
                   className="mobile-contact-icon"
-                  size={16}
+                  size={15}
                   aria-hidden="true"
                 />
               </span>

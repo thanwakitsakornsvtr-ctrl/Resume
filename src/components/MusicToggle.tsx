@@ -28,11 +28,11 @@ export function MusicToggle() {
         title={feedback || label}
       >
         {loading ? (
-          <LoaderCircle size={20} aria-hidden="true" />
+          <LoaderCircle size={17} aria-hidden="true" />
         ) : playing ? (
-          <Volume2 size={20} aria-hidden="true" />
+          <Volume2 size={17} aria-hidden="true" />
         ) : (
-          <VolumeX size={20} aria-hidden="true" />
+          <VolumeX size={17} aria-hidden="true" />
         )}
       </button>
       <span className="sr-only" role="status" aria-live="polite">

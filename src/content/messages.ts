@@ -1,6 +1,6 @@
 // English source strings are typed message keys. Every key has a Thai translation.
 export const thaiMessages = {
-  'Open demo': 'เปิดเดโม',
+  'Visit website': 'เปิดเว็บไซต์',
   'View source': 'ดูซอร์สโค้ด',
   'Opens in a new tab': 'เปิดในแท็บใหม่',
   'PROJECT PREVIEW': 'ตัวอย่างผลงาน',
@@ -90,8 +90,8 @@ export const thaiMessages = {
   'Technical notes from BCG Platform: debugging, deployment, and a province-model design exploration.':
     'บันทึกจาก BCG Platform ทั้งการแก้ปัญหา การนำระบบขึ้นใช้งาน และแนวคิดออกแบบข้อมูลระดับจังหวัด',
   'Engineering notes': 'บันทึกทางวิศวกรรม',
-  'Project experience and early concepts across IoT, learning platforms, and public information.':
-    'ประสบการณ์จากโปรเจกต์และแนวคิดเริ่มต้น ทั้ง IoT แพลตฟอร์มการเรียนรู้ และข้อมูลสาธารณะ',
+  'Live projects across greenhouse monitoring, online learning, and water information.':
+    'ผลงานที่เปิดดูได้จริง ทั้งการติดตามโรงเรือน การเรียนออนไลน์ และข้อมูลน้ำ',
   'Explore project': 'ดูรายละเอียดโปรเจกต์',
   'Project-based experience. Some project details are being refined.':
     'ประสบการณ์จากการทำโปรเจกต์ โดยอยู่ระหว่างเพิ่มเติมรายละเอียดบางส่วน',
@@ -120,6 +120,29 @@ export const thaiMessages = {
   'Background music': 'เพลงบรรเลง',
   'Choose website language': 'เลือกภาษาของเว็บไซต์',
   'Website language': 'ภาษาของเว็บไซต์',
+  'AVAILABLE FOR FULL-STACK / BACKEND ROLES':
+    'พร้อมร่วมงานในสาย Full-Stack / Backend',
+  'REAL-WORLD SYSTEMS & ARCHITECTURE': 'ระบบใช้งานจริงและสถาปัตยกรรม',
+  '4 Systems Built': '4 ระบบที่พัฒนา',
+  '3 Live Public Demos': '3 เว็บไซต์ออนไลน์จริง',
+  'Full-Stack & VPS': 'ครบวงจรถึงการติดตั้ง VPS',
+  'Quick jump to systems': 'ทางลัดไปยังระบบที่พัฒนา',
+  'Featured System': 'ระบบหลักที่นำเสนอ',
+  'View Architecture': 'ดูสถาปัตยกรรม',
+  'Live Demo': 'เปิดดูเว็บจริง',
+  'Ownership & Scope': 'ความรับผิดชอบและขอบเขตงาน',
+  'Inspect related screen': 'ดูหน้าจอระบบที่เกี่ยวข้อง',
+  'Verified live deployment': 'ตรวจสอบได้บนเว็บไซต์จริง',
+  'Development capture': 'บันทึกจากสภาพแวดล้อมพัฒนา',
+  'ENGINEERING BREAKDOWN': 'รายละเอียดเชิงวิศวกรรมและการออกแบบ',
+  'Architecture, ownership, and scope':
+    'ความรับผิดชอบ การตัดสินใจ และขอบเขตของระบบ',
+  'Tech stack & capabilities': 'เทคโนโลยีและองค์ประกอบหลัก',
+  'CORE FOCUS': 'ความถนัดและสิ่งที่มุ่งเน้น',
+  'WORKING PRINCIPLES': 'หลักการทำงาน',
+  'SYSTEM WORKFLOW': 'กระบวนการพัฒนาระบบ',
+  'From root-cause analysis to production delivery.':
+    'ตั้งแต่การวิเคราะห์สาเหตุจากหลักฐานไปจนถึงการส่งมอบระบบขึ้นใช้งานจริง',
 } as const
 
 export type Message = keyof typeof thaiMessages

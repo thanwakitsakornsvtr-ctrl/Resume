@@ -76,9 +76,9 @@ export const navigation: NavigationItem[] = [
 export const featuredProject: FeaturedProject = {
   ...projectAssets.bcg,
   title: 'BCG Platform',
-  eyebrow: 'Connecting people, participation, and environmental action.',
+  eyebrow: 'Low-carbon choices. Everyday environmental action.',
   description:
-    'An environmental management platform connecting customers, merchants, municipalities, and administrators. My project experience spans frontend, backend, database design, access control, and deployment.',
+    'A platform connecting low-carbon products, eco-friendly actions, point collection, and shop rewards. Customers, merchants, municipalities, and administrators use dedicated interfaces supported by role-based access.',
   contentStatus: 'draft',
   stage: 'Deployed project',
   tags: ['Node.js', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Docker'],
@@ -105,7 +105,7 @@ export const featuredProject: FeaturedProject = {
     },
   ],
   limitations:
-    'Project experience across application development and deployment. Demo links, screenshots, and a detailed breakdown of individual and team contributions will be added.',
+    'Screenshots show the current application in the development environment, including some test data. External demo links and a detailed breakdown of individual and team contributions are still being documented.',
 }
 
 export const workspace = {
@@ -139,7 +139,7 @@ export const workspace = {
     'Activities & transactions',
     'Evaluation & oversight',
   ],
-  note: 'Illustrative project overview. Screenshots and detailed feature notes will be added.',
+  note: 'An illustrative overview of the roles and workflow within the platform.',
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -231,49 +231,49 @@ export const projects: Project[] = [
       'An IoT monitoring and control project for an oyster-mushroom greenhouse, connecting environmental readings with fan and misting controls.',
     tags: ['ESP32', 'MicroPython', 'SCD40', 'Node.js'],
     contentStatus: 'draft',
-    stage: 'Project notes',
+    stage: 'Live website',
     contribution:
-      'The project connects device/server communication, environmental monitoring, and manual/automatic controls. Individual responsibilities across firmware, server, and controls are being documented.',
+      'The project connects environmental telemetry, device/server communication, and automatic equipment control. The public website presents readings, equipment status, history, and control rules; individual firmware and server contributions are being documented.',
     decision:
-      'Investigate sensor validity alongside communication. A CO₂ reading of zero, while temperature and humidity remain available, is an open debugging topic.',
+      'Separate monitoring from actuation: the website explains conditions and control rules while the greenhouse controller handles automatic operation. Display the time and availability of readings alongside their values.',
     limitation:
-      'Demo links, screenshots, current development status, and individual contributions will be added.',
+      'Screenshots document the public monitoring and automation pages at capture time. Sensor values and device availability change; individual and team contributions are still being documented.',
   },
   {
     id: 'lifelong-learning',
     ...projectAssets.lifelong,
     title: 'Lifelong Learning',
-    category: 'Understanding the services behind the product',
+    category: 'Course discovery and online learning',
     preview: 'services',
     description:
-      'A learning-platform project involving frontend and backend services, PostgreSQL, Redis, and SeaweedFS, developed and tested through Docker Compose.',
+      'An online learning platform for exploring courses, comparing fees, and reviewing lessons and activities before enrollment. The project includes frontend and backend services with PostgreSQL, Redis, and SeaweedFS.',
     tags: ['Docker Compose', 'PostgreSQL', 'Redis', 'SeaweedFS'],
     contentStatus: 'draft',
-    stage: 'Project notes',
+    stage: 'Live website',
     contribution:
-      'Project experience with a multi-service application environment. Exact feature ownership and the split between my work and team contributions are still being documented.',
+      'Project experience across course discovery, course-information interfaces, and a multi-service application environment. Exact feature ownership and individual versus team contributions are still being documented.',
     decision:
-      'Make each service’s responsibility, communication, and configuration explicit so the development environment can be understood and investigated.',
+      'Make course content, fees, dates, and learning activities discoverable before sign-in, while keeping enrollment and classroom access tied to a learner account.',
     limitation:
-      'Demo links, screenshots, individual feature contributions, and current deployment status will be added.',
+      'Screenshots cover public course discovery and detail pages. Some course content is marked as an example; authenticated classroom and enrollment workflows were outside this screenshot review.',
   },
   {
     id: 'sisaket-flood',
     ...projectAssets.flood,
-    title: 'Sisaket Flood Management',
-    category: 'A design exploration for communities at risk',
+    title: 'Sisaket Prompt',
+    category: 'Water information and flood readiness',
     preview: 'flood',
     description:
-      'A flood-information and alert concept for Sisaket, exploring water-level maps, affected areas, and notifications for people in at-risk communities.',
-    tags: ['System design', 'Geospatial data', 'Alert workflows'],
+      'A water-information platform for Sisaket with station readings, rainfall and reservoir information, interactive maps, and links to preparedness and assistance resources.',
+    tags: ['Water information', 'Interactive maps', 'Data freshness'],
     contentStatus: 'draft',
-    stage: 'Concept / Research',
+    stage: 'Live website',
     contribution:
-      'Concept and requirements exploration around residents, vulnerable groups, map information, and alert delivery.',
+      'The public system brings station readings, map layers, and preparedness information into connected views. Detailed ownership of individual features and data integrations is still being documented.',
     decision:
-      'Consider how terrain data, water information, satellite observations, and CCTV could inform a map-and-alert workflow. LINE notifications are a proposed delivery channel.',
+      'Keep measurement times, data availability, and map legends close to the information they explain. Offer both map-based exploration and a text-oriented water-information page.',
     limitation:
-      'Concept / research stage. Data-source selection and integration, alert validation, and implementation scope remain to be developed.',
+      'The live public pages are documented here. Data freshness and layer availability vary by source; screenshots represent the capture time. Staff workflows and alert delivery were outside this screenshot review.',
   },
 ]
 

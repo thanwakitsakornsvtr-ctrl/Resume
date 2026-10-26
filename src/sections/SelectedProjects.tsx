@@ -4,6 +4,7 @@ import { ProjectMedia } from '../components/ProjectMedia'
 import { ArrowUpRight } from 'lucide-react'
 import { SectionHeading, Tag } from '../components/ui'
 import { ProjectPreview } from '../components/ProjectPreview'
+
 export function SelectedProjects() {
   const { projects, t } = useContent()
   return (
@@ -24,7 +25,7 @@ export function SelectedProjects() {
             </span>
           }
           description={t(
-            'Project experience and early concepts across IoT, learning platforms, and public information.',
+            'Live projects across greenhouse monitoring, online learning, and water information.',
           )}
         />
         <div className="projects-grid">
@@ -42,7 +43,12 @@ export function SelectedProjects() {
                 <p className="project-category">{project.category}</p>
                 <div className="project-title-row">
                   <h3>{project.title}</h3>
-                  <span className="sample-small">
+                  <span
+                    className={
+                      project.demoUrl ? 'status-pill is-online' : 'sample-small'
+                    }
+                  >
+                    {project.demoUrl && <span className="status-pill-dot" />}
                     {project.stage ?? t('Project')}
                   </span>
                 </div>
