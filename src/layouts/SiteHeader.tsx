@@ -15,7 +15,7 @@ export function SiteHeader({ homeHref = '' }: { homeHref?: string }) {
   const activeSection = usePortfolioStore((state) => state.activeSection)
   const menuButton = useRef<HTMLButtonElement>(null)
   const { ref, compact } = useCompactHeader()
-  useActiveSection()
+  useActiveSection(homeHref)
   const currentSection = homeHref ? 'featured-project' : activeSection
 
   useEffect(() => {

@@ -7,7 +7,7 @@ import { motion } from '../theme/motion'
 
 gsap.registerPlugin(useGSAP, ScrollTrigger)
 
-export function usePortfolioMotion() {
+export function usePortfolioMotion(routeKey = '/') {
   const scope = useRef<HTMLDivElement>(null)
   useGSAP(
     () => {
@@ -54,12 +54,12 @@ export function usePortfolioMotion() {
       })
       return () => media.revert()
     },
-    { scope },
+    { scope, dependencies: [routeKey], revertOnUpdate: true },
   )
   return scope
 }
 
-export function useActiveSection() {
+export function useActiveSection(routeKey = '/') {
   const setActiveSection = usePortfolioStore((state) => state.setActiveSection)
   useEffect(() => {
     const sections =
@@ -81,7 +81,7 @@ export function useActiveSection() {
     )
     sections.forEach((section) => observer.observe(section))
     return () => observer.disconnect()
-  }, [setActiveSection])
+  }, [setActiveSection, routeKey])
 }
 
 export function useCopyEmail(email: string) {
