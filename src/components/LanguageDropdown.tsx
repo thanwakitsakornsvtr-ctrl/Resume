@@ -69,7 +69,12 @@ export function LanguageDropdown() {
       className="language-dropdown"
       onKeyDown={handleKey}
       onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+        if (
+          event.relatedTarget instanceof Node &&
+          !event.currentTarget.contains(event.relatedTarget)
+        ) {
+          setOpen(false)
+        }
       }}
     >
       <button
