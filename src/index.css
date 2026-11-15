@@ -1849,7 +1849,7 @@ details[open] > summary .plus-mark {
 }
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
   align-items: stretch;
 }
@@ -2820,13 +2820,13 @@ details[open] > summary .plus-mark {
     display: none;
   }
   .projects-grid {
-    column-gap: 16px;
+    gap: 16px;
   }
   .project-card-body {
-    padding: 24px 16px;
+    padding: 18px;
   }
   .mini-preview {
-    height: 216px;
+    height: 184px;
   }
   .component-size-label {
     display: none;
@@ -3183,24 +3183,26 @@ details[open] > summary .plus-mark {
   }
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 16px;
   }
   .mini-preview {
-    height: 248px;
-    padding-inline: 32px;
+    height: 176px;
+    padding-inline: 20px;
   }
   .project-card-body {
-    padding: 24px;
+    padding: 16px;
   }
   .project-title-row h3 {
-    font-size: 24px;
+    font-size: 19px;
   }
   .project-description {
     min-height: 0;
+    font-size: 13.5px;
+    -webkit-line-clamp: 3;
   }
   .project-tags {
     min-height: auto;
-    margin-bottom: 24px;
+    margin-bottom: 0;
   }
   .project-detail-link {
     font-size: 14px;
@@ -3811,7 +3813,7 @@ html[lang='th'] .hero-focus {
   border-radius: 12px;
 }
 .project-media-selected {
-  height: 196px;
+  height: 224px;
   border-bottom: 1px solid #e8e9ef;
 }
 @media (max-width: 1100px) {
@@ -3821,7 +3823,7 @@ html[lang='th'] .hero-focus {
 }
 @media (max-width: 767px) {
   .project-media-selected {
-    height: 200px;
+    height: 176px;
   }
   .project-external-links {
     gap: 8px;
@@ -4093,18 +4095,13 @@ html[lang='th'] .hero-focus {
    links, and detail-link tracks. */
 @media (max-width: 767px), print {
   .projects-grid {
-    row-gap: 24px;
-  }
-  .project-card,
-  .project-card-body {
-    display: block;
-    grid-row: auto;
+    row-gap: 16px;
   }
   .project-title-row {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 8px;
+    gap: 6px;
   }
   .sample-small {
     margin-top: 0;
