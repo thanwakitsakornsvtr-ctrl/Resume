@@ -78,13 +78,13 @@ export const featuredProject: FeaturedProject = {
   title: 'BCG Platform',
   eyebrow: 'Low-carbon choices. Everyday environmental action.',
   description:
-    'A platform connecting low-carbon products, eco-friendly actions, point collection, and shop rewards. Customers, merchants, municipalities, and administrators use dedicated interfaces supported by role-based access.',
+    'A BCG Old Town platform developed in collaboration with Yasothon Municipality and Nakhon Phanom Municipality for Old Town and Livable City districts—connecting low-carbon products, eco-friendly actions, point collection, and shop rewards across four user roles.',
   contentStatus: 'draft',
   stage: 'Deployed project',
   tags: ['Node.js', 'TypeScript', 'Express', 'Prisma', 'PostgreSQL', 'Docker'],
   scope: 'Full-stack project experience',
   problem:
-    'Environmental participation involves different people and responsibilities: customers join activities, merchants manage points and transactions, municipalities evaluate activities, and administrators oversee the platform.',
+    'Environmental participation across Yasothon and Nakhon Phanom Old Town districts involves different people and responsibilities: customers join activities, merchants manage points and transactions, municipalities evaluate activities, and administrators oversee the platform.',
   responsibility:
     'Frontend integration and error states; API and business-logic development; role-based access; Prisma/PostgreSQL schema and migrations; Docker deployment on a VPS with HTTPS and a reverse proxy. Detailed ownership and team contributions are being documented.',
   decisions: [
@@ -264,16 +264,94 @@ export const projects: Project[] = [
     category: 'Water information and flood readiness',
     preview: 'flood',
     description:
-      'A water-information platform for Sisaket with station readings, rainfall and reservoir information, interactive maps, and links to preparedness and assistance resources.',
+      'A water-information platform developed in collaboration with Sisaket Municipality, providing station readings, rainfall and reservoir information, interactive maps, and preparedness and assistance resources.',
     tags: ['Water information', 'Interactive maps', 'Data freshness'],
     contentStatus: 'draft',
     stage: 'Live website',
     contribution:
-      'The public system brings station readings, map layers, and preparedness information into connected views. Detailed ownership of individual features and data integrations is still being documented.',
+      'Developed in collaboration with Sisaket Municipality, the public system brings station readings, map layers, and preparedness information into connected views. Detailed ownership of individual features and data integrations is still being documented.',
     decision:
       'Keep measurement times, data availability, and map legends close to the information they explain. Offer both map-based exploration and a text-oriented water-information page.',
     limitation:
       'The live public pages are documented here. Data freshness and layer availability vary by source; screenshots represent the capture time. Staff workflows and alert delivery were outside this screenshot review.',
+  },
+  {
+    id: 'thanwa-pos',
+    ...projectAssets.thanwaPos,
+    title: 'Thanwa POS & Store Platform',
+    category: 'Multi-tenant POS & real-time inventory',
+    preview: 'pos',
+    description:
+      'Enterprise multi-tenant Point-of-Sale and real-time inventory platform built as a Go Modular Monolith, separating the Store POS Terminal (Expo / React Native Web PWA) and Platform Admin Console (Angular 22), and served from a university machine via Cloudflare Tunnel.',
+    tags: [
+      'Go',
+      'Expo PWA',
+      'Angular 22',
+      'MongoDB',
+      'Redis',
+      'SeaweedFS',
+      'Cloudflare Tunnel',
+    ],
+    contentStatus: 'draft',
+    stage: 'Live via Cloudflare Tunnel',
+    contribution:
+      'Architected and built the Go Modular Monolith backend (auth, store, product, order, report, health modules via explicit interface bridges), the Expo React 19 PWA store portal with barcode scan-on-enter and EMVCo PromptPay QR, the Angular 22 admin console, and Docker Distroless deployment exposed through Cloudflare Tunnel.',
+    decision:
+      'Prevent overselling and precision loss using MongoDB conditional atomic $inc (stock >= qty) with Saga compensating rollback, server-authoritative integer satang (int64) arithmetic, idempotent daily sales rollups, JWT-derived store_id for IDOR prevention, magic-byte media validation, and Cloudflare Tunnel instead of a VPS.',
+    limitation:
+      'Hosted on a university workstation and exposed publicly via Cloudflare Tunnel (app.kitsakorn.com) rather than a dedicated VPS. Screenshots show the live store portal and POS terminal using a demo store account.',
+  },
+  {
+    id: 'nong-c',
+    ...projectAssets.nongC,
+    title: 'Nong C — Hybrid RAG AI Assistant',
+    category: 'Zero-hallucination educational AI assistant',
+    preview: 'ai',
+    description:
+      'Enterprise-grade Hybrid RAG AI assistant for Software Engineering academic services, built as a Go Modular Monolith with unified PostgreSQL 18 (pgvector + pg_trgm + RRF), local Ollama models (Gemma 4 & EmbeddingGemma), and a 5-stage anti-hallucination pipeline served via Cloudflare Tunnel.',
+    tags: [
+      'Go',
+      'PostgreSQL 18',
+      'pgvector',
+      'Ollama',
+      'Gemma 4',
+      'Docker',
+      'Cloudflare Tunnel',
+    ],
+    contentStatus: 'draft',
+    stage: 'Live via Cloudflare Tunnel',
+    contribution:
+      'Designed the Go standard-library Modular Monolith (retrieval, generation, conversation, contacts, knowledge, messaging), unified PostgreSQL 18 hybrid search (768-dim pgvector + pg_trgm with RRF), async document ingestion (FOR UPDATE SKIP LOCKED), deterministic contact directory bypass (<5ms), Meta Messenger HMAC webhook, and local GPU deployment.',
+    decision:
+      'Enforce zero-hallucination via strict grounding and abstention: combine query rewrite, token budgeting, citation/regex verification, LLM-as-a-Judge fact checking, and real-time source recheck—running 100% on-premise via Ollama ($0 cloud API cost) and exposed publicly through Cloudflare Tunnel.',
+    limitation:
+      'Runs on an on-premise university GPU server exposed via Cloudflare Tunnel (chatbot.kitsakorn.com) instead of a cloud VPS. Passed 25/25 acceptance RAG benchmark scenarios; public demo focuses on web trial before Meta Messenger integration.',
+  },
+  {
+    id: 'operation-phoenix',
+    ...projectAssets.phoenix,
+    title: 'Operation Phoenix',
+    category: 'Self-healing Wi-Fi & captive portal daemon',
+    preview: 'daemon',
+    description:
+      'Lightweight Linux systemd background service in Rust that monitors university Wi-Fi and FortiGate Captive Portal sessions every 30 seconds, automatically re-authenticating and restarting Cloudflare Tunnel so local apps stay online 24/7.',
+    tags: [
+      'Rust',
+      'Tokio',
+      'Axum',
+      'Reqwest',
+      'Hickory DNS',
+      'Systemd',
+      'Polkit',
+    ],
+    contentStatus: 'draft',
+    stage: 'Background service',
+    contribution:
+      'Built a single-binary trait-based Rust modular monolith (monitor, detector, auth, recovery, notify, state & web) with a deterministic decision table, exponential backoff with jitter, embedded Axum status dashboard, async SMTP alerts, and 25 unit/integration tests including a mock FortiGate server.',
+    decision:
+      'Choose HTTP-first form parsing (reqwest + scraper) over a headless browser to keep the daemon lightweight with minimal memory footprint, force IPv4 for captive-portal probes, protect secrets with secrecy::SecretString, halt on BadCredentials/CAPTCHA to avoid account lockouts, and use Polkit least-privilege rules for nmcli and cloudflared.service.',
+    limitation:
+      'Internal Linux infrastructure daemon running on the university host with a local Axum status dashboard on port 8080; adapts to different captive portals via layered TOML profiles and the dump-portal CLI.',
   },
 ]
 

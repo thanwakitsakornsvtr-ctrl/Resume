@@ -25,7 +25,7 @@ export function SelectedProjects() {
             </span>
           }
           description={t(
-            'Live projects across greenhouse monitoring, online learning, and water information.',
+            'Live websites, AI assistants, POS systems, and infrastructure tools built for real-world use.',
           )}
         />
         <div className="projects-grid">

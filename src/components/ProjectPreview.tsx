@@ -1,6 +1,7 @@
 import {
   ArrowRight,
   BellRing,
+  Bot,
   CircuitBoard,
   Database,
   Fan,
@@ -8,8 +9,11 @@ import {
   Layers3,
   MapPinned,
   Server,
+  ShieldCheck,
+  ShoppingCart,
   Sprout,
   Waves,
+  Wifi,
 } from 'lucide-react'
 import { useContent } from '../hooks/useContent'
 import type { Project } from '../types/content'
@@ -74,7 +78,7 @@ export function ProjectPreview({ type }: { type: Project['preview'] }) {
             </div>
             <p>{t('Development & testing environment')}</p>
           </>
-        ) : (
+        ) : type === 'flood' ? (
           <>
             <div className="diagram-heading">
               <MapPinned size={22} />
@@ -98,6 +102,62 @@ export function ProjectPreview({ type }: { type: Project['preview'] }) {
               </span>
             </div>
             <p>{t('Concept / Research')}</p>
+          </>
+        ) : type === 'pos' ? (
+          <>
+            <div className="diagram-heading">
+              <ShoppingCart size={22} />
+              <strong>Thanwa POS</strong>
+            </div>
+            <div className="diagram-path">
+              <span>Expo PWA / Angular 22</span>
+              <ArrowRight size={16} />
+              <span>Go Modular Monolith</span>
+            </div>
+            <div className="diagram-chips">
+              <span>Atomic Stock · Satang int64</span>
+              <span>Cloudflare Tunnel</span>
+            </div>
+            <p>{t('Multi-tenant retail platform')}</p>
+          </>
+        ) : type === 'ai' ? (
+          <>
+            <div className="diagram-heading">
+              <Bot size={22} />
+              <strong>Nong C (Hybrid RAG)</strong>
+            </div>
+            <div className="diagram-path">
+              <span>pgvector + pg_trgm (RRF)</span>
+              <ArrowRight size={16} />
+              <span>Ollama (Gemma 4)</span>
+            </div>
+            <div className="diagram-chips">
+              <span>
+                <ShieldCheck size={14} />
+                {t('5-stage fact verification')}
+              </span>
+              <span>Cloudflare Tunnel</span>
+            </div>
+            <p>{t('On-premise AI assistant')}</p>
+          </>
+        ) : (
+          <>
+            <div className="diagram-heading">
+              <Wifi size={22} />
+              <strong>Operation Phoenix</strong>
+            </div>
+            <div className="diagram-path">
+              <span>Monitor (30s)</span>
+              <ArrowRight size={16} />
+              <span>Decision Table</span>
+              <ArrowRight size={16} />
+              <span>Self-Heal</span>
+            </div>
+            <div className="diagram-chips">
+              <span>Rust · Tokio · Axum</span>
+              <span>Lightweight · Systemd</span>
+            </div>
+            <p>{t('Captive portal & tunnel daemon')}</p>
           </>
         )}
       </div>

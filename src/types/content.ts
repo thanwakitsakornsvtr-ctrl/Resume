@@ -96,7 +96,7 @@ export interface Project extends ProjectAssets {
   category: string
   description: string
   tags: string[]
-  preview: 'iot' | 'services' | 'flood'
+  preview: 'iot' | 'services' | 'flood' | 'pos' | 'ai' | 'daemon'
   contribution: string
   decision: string
   limitation: string

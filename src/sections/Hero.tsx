@@ -1,6 +1,5 @@
 import { useContent } from '../hooks/useContent'
 import { ArrowDown, ArrowUpRight, CheckCircle2 } from 'lucide-react'
-import { SystemIllustration } from '../components/SystemIllustration'
 
 export function Hero() {
   const { profile, featuredProject, projects, t } = useContent()
@@ -68,43 +67,54 @@ export function Hero() {
           </div>
         </div>
 
-        <div data-hero-reveal className="hero-visual">
-          <SystemIllustration />
-        </div>
-
         <nav
           className="hero-evidence-bar"
           aria-label={t('Quick jump to systems')}
           data-hero-reveal
         >
-          <a href="#featured-project" className="hero-evidence-card is-primary">
-            <span className="hero-evidence-meta">
-              <span className="status-pill is-live">
-                <span className="status-pill-dot" />
-                01 · {t('FEATURED PROJECT')}
-              </span>
-              <ArrowUpRight size={16} aria-hidden="true" />
-            </span>
-            <strong>{featuredProject.title}</strong>
-            <span>{featuredProject.scope}</span>
-          </a>
-          {projects.map((project, index) => (
-            <a
-              key={project.id}
-              href={`/projects/${project.id}/`}
-              className="hero-evidence-card"
-            >
-              <span className="hero-evidence-meta">
-                <span className="status-pill is-online">
-                  <span className="status-pill-dot" />0{index + 2} ·{' '}
-                  {project.stage ?? t('Project')}
-                </span>
-                <ArrowUpRight size={16} aria-hidden="true" />
-              </span>
-              <strong>{project.title}</strong>
-              <span>{project.category}</span>
-            </a>
-          ))}
+          <div className="hero-evidence-track">
+            {[false, true].map((isDuplicate) => (
+              <div
+                key={isDuplicate ? 'clone' : 'primary'}
+                className="hero-evidence-group"
+                aria-hidden={isDuplicate || undefined}
+              >
+                <a
+                  href="#featured-project"
+                  className="hero-evidence-card is-primary"
+                  tabIndex={isDuplicate ? -1 : undefined}
+                >
+                  <span className="hero-evidence-meta">
+                    <span className="status-pill is-live">
+                      <span className="status-pill-dot" />
+                      01 · {t('FEATURED PROJECT')}
+                    </span>
+                    <ArrowUpRight size={16} aria-hidden="true" />
+                  </span>
+                  <strong>{featuredProject.title}</strong>
+                  <span>{featuredProject.scope}</span>
+                </a>
+                {projects.map((project, index) => (
+                  <a
+                    key={project.id}
+                    href={`/projects/${project.id}/`}
+                    className="hero-evidence-card"
+                    tabIndex={isDuplicate ? -1 : undefined}
+                  >
+                    <span className="hero-evidence-meta">
+                      <span className="status-pill is-online">
+                        <span className="status-pill-dot" />0{index + 2} ·{' '}
+                        {project.stage ?? t('Project')}
+                      </span>
+                      <ArrowUpRight size={16} aria-hidden="true" />
+                    </span>
+                    <strong>{project.title}</strong>
+                    <span>{project.category}</span>
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
         </nav>
 
         <div className="hero-footer">

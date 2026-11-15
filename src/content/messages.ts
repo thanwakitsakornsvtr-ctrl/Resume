@@ -92,6 +92,12 @@ export const thaiMessages = {
   'Engineering notes': 'บันทึกทางวิศวกรรม',
   'Live projects across greenhouse monitoring, online learning, and water information.':
     'ผลงานที่เปิดดูได้จริง ทั้งการติดตามโรงเรือน การเรียนออนไลน์ และข้อมูลน้ำ',
+  'Live websites, AI assistants, POS systems, and infrastructure tools built for real-world use.':
+    'ระบบใช้งานจริงทั้งเว็บไซต์ แพลตฟอร์ม POS ผู้ช่วย AI และเครื่องมือโครงสร้างพื้นฐาน',
+  'Multi-tenant retail platform': 'แพลตฟอร์มค้าปลีกแบบ Multi-Tenant',
+  '5-stage fact verification': 'ตรวจสอบความถูกต้อง 5 ขั้น',
+  'On-premise AI assistant': 'ผู้ช่วย AI แบบ On-Premise',
+  'Captive portal & tunnel daemon': 'บริการดูแล Captive Portal และ Tunnel',
   'Explore project': 'ดูรายละเอียดโปรเจกต์',
   'Project-based experience. Some project details are being refined.':
     'ประสบการณ์จากการทำโปรเจกต์ โดยอยู่ระหว่างเพิ่มเติมรายละเอียดบางส่วน',

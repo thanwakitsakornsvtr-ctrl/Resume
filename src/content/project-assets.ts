@@ -102,14 +102,118 @@ const floodScreenshots: ProjectScreenshot[] = [
   },
 ]
 
+const thanwaPosScreenshots: ProjectScreenshot[] = [
+  {
+    id: 'pos-terminal',
+    src: '/projects/thanwa-pos/pos-terminal.jpg',
+    width: 1265,
+    height: 712,
+    title: {
+      en: 'Smart POS terminal & real-time stock',
+      th: 'หน้าจอจุดขายหน้าร้านและสต็อกเรียลไทม์',
+    },
+    alt: {
+      en: 'Thanwa POS terminal showing product cards with SKUs and remaining stock counts, barcode search, category filters, and the current bill summary.',
+      th: 'หน้าจอจุดขาย Thanwa POS แสดงการ์ดสินค้า รหัส SKU จำนวนคงเหลือ ช่องสแกนบาร์โค้ด ตัวกรองหมวดหมู่ และสรุปรายการขายปัจจุบัน',
+    },
+    caption: {
+      en: 'The cashier terminal displays live stock counts, supports barcode scan-on-enter, discount modes, VAT calculation, and multi-channel checkout.',
+      th: 'หน้าจอแคชเชียร์แสดงสต็อกคงเหลือแบบเรียลไทม์ รองรับการสแกนบาร์โค้ด ส่วนลด ภาษี และสรุปยอดชำระหลายช่องทาง',
+    },
+  },
+  {
+    id: 'pos-portal',
+    src: '/projects/thanwa-pos/pos-portal.jpg',
+    width: 1265,
+    height: 712,
+    title: {
+      en: 'Multi-tenant store portal',
+      th: 'พอร์ทัลเข้าสู่ระบบร้านค้าแบบ Multi-Tenant',
+    },
+    alt: {
+      en: 'Thanwa POS multi-tenant store portal sign-in screen with PWA install option, terminal status badge, and store account login form.',
+      th: 'หน้าเข้าสู่ระบบ Thanwa POS แบบ Multi-Tenant พร้อมปุ่มติดตั้งแอป PWA สถานะจุดขาย และฟอร์มเข้าสู่ระบบร้านค้า',
+    },
+    caption: {
+      en: 'Each store signs in to an isolated tenant workspace, installable as a standalone PWA and served publicly via Cloudflare Tunnel.',
+      th: 'แต่ละสาขาเข้าสู่ระบบแยกข้อมูลอิสระแบบ Multi-Tenant รองรับการติดตั้งเป็น PWA และเปิดให้เข้าถึงผ่าน Cloudflare Tunnel',
+    },
+  },
+]
+
+const nongCScreenshots: ProjectScreenshot[] = [
+  {
+    id: 'nong-c-home',
+    src: '/projects/nong-c/nong-c-home.jpg',
+    width: 1265,
+    height: 712,
+    title: {
+      en: 'SE AI assistant & suggested queries',
+      th: 'หน้าหลักผู้ช่วย AI น้องซีและคำถามแนะนำ',
+    },
+    alt: {
+      en: 'Nong C Software Engineering chatbot interface with development status, suggested questions, and chat input.',
+      th: 'หน้าหลักแชตบอตน้องซีของสาขาวิศวกรรมซอฟต์แวร์ แสดงสถานะการพัฒนา คำถามแนะนำที่มีข้อมูลรองรับ และช่องพิมพ์ข้อความ',
+    },
+    caption: {
+      en: 'A grounded RAG assistant for Software Engineering academic services, running local Gemma 4 and EmbeddingGemma models via Ollama.',
+      th: 'ผู้ช่วยอัจฉริยะด้านบริการการศึกษาของสาขา SE รันโมเดล Gemma 4 และ EmbeddingGemma แบบ On-Premise ผ่าน Ollama',
+    },
+  },
+  {
+    id: 'nong-c-reply',
+    src: '/projects/nong-c/nong-c-reply.jpg',
+    width: 1265,
+    height: 712,
+    title: {
+      en: 'Grounded Hybrid RAG response',
+      th: 'การตอบคำถามจากหลักฐานด้วย Hybrid RAG',
+    },
+    alt: {
+      en: 'Nong C chatbot answering a student question about the 500-baht damage deposit refund using verified university documents.',
+      th: 'หน้าจอแชตบอตน้องซีตอบคำถามเรื่องค่าประกันของเสียหาย 500 บาท โดยอ้างอิงจากเอกสารทางการของสาขา',
+    },
+    caption: {
+      en: 'Hybrid retrieval (pgvector + pg_trgm with RRF) and a 5-stage verification pipeline ensure answers stay strictly grounded in official documents.',
+      th: 'ค้นหาแบบไฮบริด (pgvector + pg_trgm ด้วย RRF) ร่วมกับไปป์ไลน์ตรวจสอบ 5 ขั้น เพื่อให้คำตอบตรงตามเอกสารอ้างอิงจริง',
+    },
+  },
+]
+
+const phoenixScreenshots: ProjectScreenshot[] = [
+  {
+    id: 'phoenix-dashboard',
+    src: '/projects/operation-phoenix/phoenix-dashboard.jpg',
+    width: 1265,
+    height: 712,
+    title: {
+      en: 'Embedded Axum status & incident dashboard',
+      th: 'หน้าแดชบอร์ดติดตามสถานะและประวัติเหตุการณ์',
+    },
+    alt: {
+      en: 'Operation Phoenix web dashboard showing healthy Wi-Fi status on @SSKRUNET, online connectivity, authentication state, uptime, and recent incident logs.',
+      th: 'หน้าเว็บแดชบอร์ด Operation Phoenix แสดงสถานะ Wi-Fi @SSKRUNET การเชื่อมต่ออินเทอร์เน็ต การยืนยันตัวตน Uptime และตารางประวัติเหตุการณ์ล่าสุด',
+    },
+    caption: {
+      en: 'The embedded Axum dashboard on localhost:8080 displays real-time Wi-Fi, internet, and captive-portal state alongside recent recovery incidents.',
+      th: 'หน้าแดชบอร์ด Axum ที่ฝังมากับบริการบน localhost:8080 แสดงสถานะ Wi-Fi อินเทอร์เน็ต Captive Portal และบันทึกการกู้คืนย้อนหลังแบบเรียลไทม์',
+    },
+  },
+]
+
 const publicCaptureNote = {
   en: 'Captured from the public website on 26 October 2026. Screenshots show the data available at capture time.',
   th: 'บันทึกจากหน้าเว็บสาธารณะเมื่อ 26 ต.ค. 2569 ภาพแสดงข้อมูล ณ เวลาที่บันทึก',
 }
 
+const tunnelCaptureNote = {
+  en: 'Captured from the live application served via Cloudflare Tunnel on 15 November 2026.',
+  th: 'บันทึกจากระบบจริงที่เผยแพร่ผ่าน Cloudflare Tunnel เมื่อ 15 พ.ย. 2569',
+}
+
 // Shared by English and Thai. Omit external links until their URLs are confirmed.
 export const projectAssets: Record<
-  'bcg' | 'mushroom' | 'lifelong' | 'flood',
+  'bcg' | 'mushroom' | 'lifelong' | 'flood' | 'thanwaPos' | 'nongC' | 'phoenix',
   ProjectAssets
 > = {
   bcg: {
@@ -141,6 +245,30 @@ export const projectAssets: Record<
     image: floodScreenshots[0],
     screenshots: floodScreenshots,
     screenshotNote: publicCaptureNote,
+  },
+  thanwaPos: {
+    demoUrl: 'https://app.kitsakorn.com/',
+    sourceUrl: undefined,
+    image: thanwaPosScreenshots[0],
+    screenshots: thanwaPosScreenshots,
+    screenshotNote: tunnelCaptureNote,
+  },
+  nongC: {
+    demoUrl: 'https://chatbot.kitsakorn.com/',
+    sourceUrl: undefined,
+    image: nongCScreenshots[0],
+    screenshots: nongCScreenshots,
+    screenshotNote: tunnelCaptureNote,
+  },
+  phoenix: {
+    demoUrl: undefined,
+    sourceUrl: undefined,
+    image: phoenixScreenshots[0],
+    screenshots: phoenixScreenshots,
+    screenshotNote: {
+      en: 'Captured from the live local Axum dashboard (port 8080) on 15 November 2026.',
+      th: 'บันทึกจากหน้าเว็บแดชบอร์ด Axum ของบริการจริง (พอร์ต 8080) เมื่อ 15 พ.ย. 2569',
+    },
   },
 }
 

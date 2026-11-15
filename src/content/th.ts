@@ -60,11 +60,11 @@ export const thaiContent: typeof en = {
     ...en.featuredProject,
     eyebrow: 'สินค้าลดคาร์บอนและการรักษ์โลกในชีวิตประจำวัน',
     description:
-      'แพลตฟอร์มที่เชื่อมสินค้าลดคาร์บอน พฤติกรรมรักษ์โลก การสะสมแต้ม และสิทธิประโยชน์จากร้านค้า พร้อมหน้าจอและสิทธิ์การใช้งานสำหรับลูกค้า ร้านค้า เทศบาล และผู้ดูแลระบบ',
+      'แพลตฟอร์ม BCG Old Town ที่พัฒนาร่วมกับเทศบาลยโสธรและเทศบาลนครพนม สำหรับย่านเมืองเก่า เมืองน่าเที่ยว เชื่อมสินค้าลดคาร์บอน พฤติกรรมรักษ์โลก การสะสมแต้ม และสิทธิประโยชน์จากร้านค้า พร้อมหน้าจอและสิทธิ์การใช้งานสำหรับลูกค้า ร้านค้า เทศบาล และผู้ดูแลระบบ',
     stage: 'นำขึ้นใช้งานแล้ว',
     scope: 'ประสบการณ์จากโปรเจกต์ Full-stack',
     problem:
-      'กิจกรรมด้านสิ่งแวดล้อมมีผู้เกี่ยวข้องหลายกลุ่ม ลูกค้าเข้าร่วมกิจกรรม ร้านค้าดูแลคะแนนและธุรกรรม เทศบาลประเมินกิจกรรม และผู้ดูแลระบบจัดการภาพรวม แต่ละกลุ่มต้องมีหน้าที่และสิทธิ์ที่ชัดเจน',
+      'กิจกรรมด้านสิ่งแวดล้อมในย่านเมืองเก่ายโสธรและนครพนมมีผู้เกี่ยวข้องหลายกลุ่ม ลูกค้าเข้าร่วมกิจกรรม ร้านค้าดูแลคะแนนและธุรกรรม เทศบาลประเมินกิจกรรม และผู้ดูแลระบบจัดการภาพรวม แต่ละกลุ่มต้องมีหน้าที่และสิทธิ์ที่ชัดเจน',
     responsibility:
       'เชื่อม Frontend กับ API และดูแลสถานะผิดพลาด พัฒนา API และ Business Logic จัดการสิทธิ์ตามบทบาท ออกแบบ Schema/Migration ด้วย Prisma และ PostgreSQL และติดตั้งด้วย Docker บน VPS พร้อม HTTPS และ Reverse Proxy โดยกำลังสรุปขอบเขตงานส่วนบุคคลและส่วนที่ทำร่วมกับทีมเพิ่มเติม',
     decisions: [
@@ -219,15 +219,84 @@ export const thaiContent: typeof en = {
       title: 'ศรีสะเกษพร้อม',
       category: 'ข้อมูลน้ำและการเตรียมพร้อมรับอุทกภัย',
       description:
-        'แพลตฟอร์มข้อมูลน้ำของจังหวัดศรีสะเกษ แสดงข้อมูลสถานีวัดน้ำ ฝน อ่างเก็บน้ำ และแผนที่ พร้อมเชื่อมข้อมูลเตรียมพร้อมและช่องทางขอความช่วยเหลือ',
+        'แพลตฟอร์มข้อมูลน้ำของจังหวัดศรีสะเกษที่พัฒนาร่วมกับเทศบาลศรีสะเกษ แสดงข้อมูลสถานีวัดน้ำ ฝน อ่างเก็บน้ำ และแผนที่ พร้อมเชื่อมข้อมูลเตรียมพร้อมและช่องทางขอความช่วยเหลือ',
       stage: 'เว็บไซต์ออนไลน์',
       tags: ['ข้อมูลน้ำ', 'แผนที่โต้ตอบ', 'เวลาที่มาของข้อมูล'],
       contribution:
-        'ระบบสาธารณะเชื่อมข้อมูลสถานี ชั้นข้อมูลบนแผนที่ และข้อมูลเตรียมรับมือไว้ในหน้าที่สัมพันธ์กัน โดยกำลังสรุปขอบเขตงานส่วนบุคคลของแต่ละฟีเจอร์และการเชื่อมแหล่งข้อมูล',
+        'พัฒนาร่วมกับเทศบาลศรีสะเกษ เชื่อมข้อมูลสถานี ชั้นข้อมูลบนแผนที่ และข้อมูลเตรียมรับมือไว้ในหน้าที่สัมพันธ์กัน โดยกำลังสรุปขอบเขตงานส่วนบุคคลของแต่ละฟีเจอร์และการเชื่อมแหล่งข้อมูล',
       decision:
         'วางเวลาตรวจวัด ความพร้อมของข้อมูล และคำอธิบายสัญลักษณ์ไว้ใกล้ข้อมูลที่อ้างถึง พร้อมให้สำรวจทั้งบนแผนที่และหน้าข้อมูลน้ำแบบข้อความ',
       limitation:
         'นำเสนอหน้าสาธารณะที่เปิดใช้งานจริง ความใหม่และความพร้อมของแต่ละชั้นข้อมูลขึ้นกับแหล่งที่มา ภาพเป็นข้อมูล ณ เวลาบันทึก ส่วนงานเจ้าหน้าที่และการส่งแจ้งเตือนอยู่นอกขอบเขตการเก็บภาพครั้งนี้',
+    },
+    {
+      ...en.projects[3]!,
+      title: 'Thanwa POS & Store Platform',
+      category: 'แพลตฟอร์ม POS และบริหารคลังสินค้า Multi-Tenant',
+      description:
+        'ระบบขายหน้าร้านและคลังสินค้าอัจฉริยะแบบ Multi-Tenant พัฒนาด้วยสถาปัตยกรรม Modular Monolith (Go) แยก Store POS Terminal (Expo PWA) และ Platform Admin Console (Angular 22) ให้บริการผ่าน Cloudflare Tunnel จากเครื่องมหาวิทยาลัย',
+      stage: 'ออนไลน์ผ่าน Cloudflare Tunnel',
+      tags: [
+        'Go',
+        'Expo PWA',
+        'Angular 22',
+        'MongoDB',
+        'Redis',
+        'SeaweedFS',
+        'Cloudflare Tunnel',
+      ],
+      contribution:
+        'ออกแบบและพัฒนา Backend Go Modular Monolith (auth, store, product, order, report, health ผ่าน Interface Bridges) พอร์ทัลร้านค้า Expo React 19 PWA พร้อมสแกนบาร์โค้ดและสร้าง QR PromptPay อัตโนมัติ, Admin Console ด้วย Angular 22 และติดตั้งบน Docker Distroless ผ่าน Cloudflare Tunnel',
+      decision:
+        'ป้องกันขายเกินคลังและทศนิยมคลาดเคลื่อนด้วย Atomic $inc ของ MongoDB (stock >= qty) พร้อม Saga Rollback, คำนวณเงินด้วยหน่วยสตางค์ (int64) ฝั่งเซิร์ฟเวอร์, Daily Sales Rollup, ดึง store_id จาก JWT เพื่อป้องกัน IDOR, ตรวจ Magic Bytes ของรูปภาพ และใช้ Cloudflare Tunnel แทนเครื่อง VPS',
+      limitation:
+        'โฮสต์บนเครื่องคอมพิวเตอร์ภายในมหาวิทยาลัยและเผยแพร่ผ่าน Public DNS ด้วย Cloudflare Tunnel (app.kitsakorn.com) แทนเครื่อง VPS ภาพหน้าจอแสดงระบบจริงโดยใช้บัญชีร้านค้าทดสอบ',
+    },
+    {
+      ...en.projects[4]!,
+      title: 'น้องซี (Nong C) — Hybrid RAG AI',
+      category: 'ผู้ช่วย AI บริการการศึกษาแบบ Zero-Hallucination',
+      description:
+        'ระบบผู้ช่วยอัจฉริยะ Hybrid RAG สำหรับงานบริการการศึกษา พัฒนาด้วย Go Modular Monolith บน PostgreSQL 18 (pgvector + pg_trgm + RRF) และโมเดล Local AI ผ่าน Ollama (Gemma 4 & EmbeddingGemma) พร้อมไปป์ไลน์กันภาพหลอน 5 ขั้น ผ่าน Cloudflare Tunnel',
+      stage: 'ออนไลน์ผ่าน Cloudflare Tunnel',
+      tags: [
+        'Go',
+        'PostgreSQL 18',
+        'pgvector',
+        'Ollama',
+        'Gemma 4',
+        'Docker',
+        'Cloudflare Tunnel',
+      ],
+      contribution:
+        'ออกแบบ Go Standard-Library Modular Monolith (retrieval, generation, conversation, contacts, knowledge, messaging), ระบบค้นหาไฮบริดบน PostgreSQL 18 (pgvector 768 มิติ + pg_trgm ด้วย RRF), คิวประมวลผลเอกสาร (FOR UPDATE SKIP LOCKED), สมุดติดต่อแบบ Deterministic (<5ms) และ Webhook Meta Messenger',
+      decision:
+        'คุม Zero-Hallucination ด้วยการปฏิเสธตอบเมื่อไม่มีหลักฐาน ผ่านไปป์ไลน์ 5 ขั้น (ขยายคำค้น, คุม Token Budget, ตรวจ Citation/Regex ตัวเลข, LLM-as-a-Judge และเช็กสถานะเอกสารซ้ำ) รันโมเดลภายใน 100% ลดต้นทุน API เป็น $0 และเผยแพร่ผ่าน Cloudflare Tunnel',
+      limitation:
+        'รันบน GPU Server ภายในมหาวิทยาลัยและเผยแพร่ผ่าน Cloudflare Tunnel (chatbot.kitsakorn.com) แทน VPS ผ่านชุดทดสอบ Acceptance RAG Benchmark 25/25 scenarios และเปิดหน้าเว็บจำลองก่อนเชื่อมเพจ Facebook',
+    },
+    {
+      ...en.projects[5]!,
+      title: 'Operation Phoenix',
+      category: 'บริการพื้นหลังกู้คืน Wi-Fi และ Captive Portal อัตโนมัติ',
+      description:
+        'Linux systemd service ขนาดเบา (lightweight) เขียนด้วย Rust สำหรับตรวจจับ วินิจฉัย และล็อกอิน Wi-Fi มหาวิทยาลัยแบบ Captive Portal อัตโนมัติทุก 30 วินาที พร้อมรีสตาร์ท Cloudflare Tunnel และแสดงสถานะผ่าน Axum Dashboard บนพอร์ต 8080',
+      stage: 'Background service',
+      tags: [
+        'Rust',
+        'Tokio',
+        'Axum',
+        'Reqwest',
+        'Hickory DNS',
+        'Systemd',
+        'Polkit',
+      ],
+      contribution:
+        'พัฒนา Single-Binary Modular Monolith ใน Rust (monitor, detector, auth, recovery, notify, state & web) พร้อม Decision Table, Exponential Backoff + Jitter, หน้า Web Dashboard บน Axum, แจ้งเตือนอีเมลด้วย lettre และชุดทดสอบ 25 test cases รวม mock FortiGate server',
+      decision:
+        'เลือกส่ง HTTP Form ตรง (reqwest + scraper) แทน Headless Browser เพื่อให้ระบบมีขนาดเบาและประหยัดหน่วยความจำ, บังคับ IPv4 สำหรับ probe, ห่อรหัสผ่านด้วย secrecy::SecretString, หยุดทันทีเมื่อรหัสผิดหรือติด CAPTCHA และใช้ Polkit rule เฉพาะทางให้สั่ง nmcli กับ cloudflared.service โดยไม่ต้องรันเป็น root',
+      limitation:
+        'เป็นบริการโครงสร้างพื้นฐานที่รันบนเครื่องโฮสต์ Linux ของมหาวิทยาลัย พร้อมหน้าเว็บแดชบอร์ดภายในพอร์ต 8080 และรองรับการปรับโปรไฟล์ Captive Portal อื่นผ่านไฟล์ TOML และคำสั่ง dump-portal',
     },
   ],
   practices: [
